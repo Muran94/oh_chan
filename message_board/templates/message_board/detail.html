@@ -1,0 +1,8 @@
+<h2>{{ messageboard.title }}</h2>
+
+レス一覧
+<ul>
+  {% for comment in messageboard.comment_set.all %}
+    <li>{{ forloop.counter }} -- {{ comment }}</li>
+  {% endfor %}
+</ul>

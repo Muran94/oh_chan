@@ -1,0 +1,11 @@
+<h1>スレ一覧</h1>
+
+{% if latest_message_board_list %}
+  <ul>
+    {% for message_board in latest_message_board_list %}
+      <li><a href="{% url 'message_board:detail' message_board.id %}">{{ message_board.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>まだスレがたってない。。。</p>
+{% endif %}
